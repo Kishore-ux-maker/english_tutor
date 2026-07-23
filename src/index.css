@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  
+  --color-dark-950: #050811;
+  --color-dark-900: #0b0f19;
+  --color-dark-800: #131b2e;
+  --color-dark-700: #1e293b;
+  --color-dark-600: #334155;
+  
+  --color-accent-purple: #8b5cf6;
+  --color-accent-amber: #f59e0b;
+  --color-accent-emerald: #10b981;
+  --color-accent-indigo: #6366f1;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-950);
+  color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Premium gradient texts */
+.text-gradient-purple-amber {
+  background: linear-gradient(135deg, #a78bfa 0%, #fcd34d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-indigo-emerald {
+  background: linear-gradient(135deg, #818cf8 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(19, 27, 46, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(19, 27, 46, 0.6);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-700);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-purple);
+}
